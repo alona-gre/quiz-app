@@ -4,11 +4,12 @@ class Answer extends StatelessWidget {
   final void Function() selectHandler;
   final String answerText;
 
-  Answer(this.selectHandler, String this.answerText);
+  const Answer(this.selectHandler, this.answerText, {Key? key})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: double.infinity,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(

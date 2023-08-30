@@ -10,7 +10,6 @@ void main() {
 class MyApp extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return _MyAppState();
   }
 }
@@ -62,10 +61,13 @@ class _MyAppState extends State<MyApp> {
     setState(() {
       _questionIndex = _questionIndex + 1;
     });
+    // ignore: avoid_print
     print(_questionIndex);
     if (_questionIndex < _questions.length) {
+      // ignore: avoid_print
       print('We have more questions!');
     } else {
+      // ignore: avoid_print
       print('No more questions!');
     }
   }
@@ -75,7 +77,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('My First App'),
+          title: const Text('My First App'),
         ),
         body: _questionIndex < _questions.length
             ? Quiz(
